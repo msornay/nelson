@@ -18,7 +18,7 @@ parser.add_argument('--hook', help="https://hooks.slack.com/services/{HOOK}")
 
 args = parser.parse_args()
 
-first_run = False
+first_run = True
 
 while True:
     rio_conn = http.client.HTTPSConnection('www.rio2016.com')
