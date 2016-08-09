@@ -46,6 +46,7 @@ while True:
                     break       # scanned all the medal of this type
             except KeyError:
                 continue
+    logging.info('parsed {:d} medals'.format(len(medals)))
 
     with shelve.open('medals_db') as medals_db: # use a shelf as a persistent set
         for m in medals:
@@ -68,5 +69,4 @@ while True:
                         }))
 
     first_run = False
-    logging.info('done parsing medals')
     time.sleep(20)
